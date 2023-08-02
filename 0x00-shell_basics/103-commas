@@ -1,0 +1,3 @@
+#!/bin/bash
+ls -p1a | sort -df | sed ':a;N;$!ba;s/\n/, /g;s/, $/\n/'
+
