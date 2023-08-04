@@ -1,3 +1,2 @@
 #!/bin/bash
-ls -p1a | sort -df | sed ':a;N;$!ba;s/\n/, /g;s/, $/\n/'
-
+files=$(ls -ap1 | grep -v '/$' | sort -df | tr '\n' ', ') echo "${files%, }"
